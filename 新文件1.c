@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include  <time.h>
-void bubble(const int *array)
+void bubble(const int *const array)
 {
 	int arrayCopy[5];
 	arrayCopy[0]=array[0];
