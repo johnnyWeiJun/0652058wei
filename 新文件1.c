@@ -1,31 +1,32 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include  <time.h>
-void bubble(int *const num)
+void bubble(const int *array)
 {
-	
+	int arrayCopy[5];
+	arrayCopy[0]=array[0];
 	int integera,integerb,integerx,integeri,integert;
 	for(integeri=0;integeri<5;integeri++)
 	{
 		integerx=rand()%40+10;
-		num[integeri]=integerx;
+		arrayCopy[integeri]=integerx;
 		
 	}
       for(integera=0;integera<4;integera++)
       {  
     	for(integerb=integera+1;integerb<5;integerb++)
     	{
-    		if(num[integera]>num[integerb])
+    		if(arrayCopy[integera]>arrayCopy[integerb])
     		{
-    			integert=num[integera];
-    			num[integera]=num[integerb];
-    			num[integerb]=integert;
+    			integert=arrayCopy[integera];
+    			arrayCopy[integera]=arrayCopy[integerb];
+    			arrayCopy[integerb]=integert;
 			}
 		}
 	  }
 	  printf("\n");
       for(integeri=0;integeri<5;integeri++)
       {
- 	    printf("%d\n",num[integeri]);
+ 	    printf("%d\n",arrayCopy[integeri]);
       }
 }
