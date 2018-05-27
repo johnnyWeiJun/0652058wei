@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include  <time.h>
-void bubble(int *num)
+void bubble(int *const num)
 {
 	
 	int integera,integerb,integerx,integeri,integert;
